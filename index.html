@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>经典俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>经典俄罗斯方块</h1>
+        <p>方向键移动，↑旋转，空格瞬间下落，P 暂停/继续。</p>
+      </header>
+      <main>
+        <section class="board">
+          <canvas id="game" width="320" height="640" aria-label="俄罗斯方块主棋盘"></canvas>
+        </section>
+        <aside class="panel">
+          <div class="panel-card">
+            <h2>下一块</h2>
+            <canvas id="next" width="128" height="128" aria-label="下一块预览"></canvas>
+          </div>
+          <div class="panel-card stats">
+            <div>
+              <span>分数</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span>等级</span>
+              <strong id="level">1</strong>
+            </div>
+            <div>
+              <span>已消行</span>
+              <strong id="lines">0</strong>
+            </div>
+          </div>
+          <div class="panel-card controls">
+            <h2>操作提示</h2>
+            <ul>
+              <li>← →：左右移动</li>
+              <li>↓：加速下落</li>
+              <li>↑：旋转</li>
+              <li>空格：瞬间下落</li>
+              <li>P：暂停/继续</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+      <footer>
+        <button id="restart" type="button">重新开始</button>
+        <span id="status">进行中</span>
+      </footer>
+    </div>
+    <script src="tetris.js"></script>
+  </body>
+</html>
